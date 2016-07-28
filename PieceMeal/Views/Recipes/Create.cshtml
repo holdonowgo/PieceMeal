@@ -1,0 +1,27 @@
+﻿@model PieceMeal.ViewModels.RecipeFormViewModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add New Recipe</h2>
+<form>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description)
+        @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Cuisine)
+        @Html.DropDownListFor(m => m.Cuisine, new SelectList(Model.Cuisines, "Id", "Name"), "", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.MealType)
+        @Html.DropDownListFor(m => m.MealType, new SelectList(Model.MealTypes, "Id", "Name"), "", new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Save Recipe</button>
+</form>
+
