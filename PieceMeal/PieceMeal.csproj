@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClientsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -209,15 +210,27 @@
     <Compile Include="Migrations\201607262214373_CreateClientRecipeTables.Designer.cs">
       <DependentUpon>201607262214373_CreateClientRecipeTables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201607281740251_CreateCusineMealTypeTables.cs" />
+    <Compile Include="Migrations\201607281740251_CreateCusineMealTypeTables.Designer.cs">
+      <DependentUpon>201607281740251_CreateCusineMealTypeTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201607281758205_OverrideConventionsForRecipeAndMealTypeAndCuisine.cs" />
+    <Compile Include="Migrations\201607281758205_OverrideConventionsForRecipeAndMealTypeAndCuisine.Designer.cs">
+      <DependentUpon>201607281758205_OverrideConventionsForRecipeAndMealTypeAndCuisine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\Cuisine.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\MealType.cs" />
     <Compile Include="Models\Recipe.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\ClientFormViewModel.cs" />
+    <Compile Include="ViewModels\RecipeFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -230,9 +243,6 @@
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -279,6 +289,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Clients\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -297,6 +308,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201607262214373_CreateClientRecipeTables.resx">
       <DependentUpon>201607262214373_CreateClientRecipeTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607281740251_CreateCusineMealTypeTables.resx">
+      <DependentUpon>201607281740251_CreateCusineMealTypeTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201607281758205_OverrideConventionsForRecipeAndMealTypeAndCuisine.resx">
+      <DependentUpon>201607281758205_OverrideConventionsForRecipeAndMealTypeAndCuisine.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
