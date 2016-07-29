@@ -14,6 +14,8 @@ namespace PieceMeal.Models
 
         //public List<ClientRecipe> ClientRecipes { get; set; }
         public Cuisine Cuisine { get; set; }
+        public byte CuisineId { get; set; }
         public MealType MealType { get; set; }
+        public byte MealTypeId { get; set; }
     }
 }

@@ -7,8 +7,8 @@ namespace PieceMeal.ViewModels
     {
         public string Name { get; set; }
         public string Description { get; set; }
-        public int Cuisine { get; set; }
-        public int MealType { get; set; }
+        public byte Cuisine { get; set; }
+        public byte MealType { get; set; }
 
         public IEnumerable<Cuisine> Cuisines { get; set; }
 
